@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: silver;
+}
+
+/* Logo (fixed at top) */
+.logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center; /* sabko center karega */
+  align-items: center;
+  padding: 12px 20px;
+  z-index: 1000;
+}
+
+.logo h1 {
+  font-size: 26px;
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* bilkul center */
+}
+
+/* Navigation bar */
+nav {
+  margin-top: 50px; /* space below fixed logo */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black; 
+  padding: 12px 20px;
+  border-bottom: 1px solid #444;
+}
+
+/* Categories */
+.categories {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  color: white; /* ✅ text white by default */
+}
+
+.categories li {
+  cursor: pointer;
+  font-size: 18px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.categories li:hover {
+  background: #222;
+  color: #00aaff;
+}
+
+.categories li.active {
+  background: #00aaff;
+  color: white;
+}
+
+/* Search Bar */
+.searchBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.searchBar input {
+  width: 220px;
+  padding: 6px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.searchBar button {
+  padding: 6px 12px;
+  background-color: #00aaff;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Category Title */
+.category {
+  margin-top: 20px;
+  text-align: center;
+  color: black;
+}
+
+/* Loader Container */
+.loader-container {
+  text-align: center;
+  margin: 40px auto;
+  display: none; /* Hidden by default */
+}
+
+/* Spinner */
+.loader {
+  border: 6px solid #f3f3f3; /* Light gray */
+  border-top: 6px solid #00aaff; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 10px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loader-container p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #00aaff;
+}
+
+/* News Cards */
+.cardData {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  width: 90%;
+  margin: 30px auto;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card h3 {
+  margin: 12px;
+  font-size: 18px;
+  color: #333;
+}
+
+.card p {
+  margin: 0 12px 12px;
+  font-size: 15px;
+  color: #555;
+}
+
+.logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between; /* Logo left, button right */
+  align-items: center;
+  padding: 12px 20px;
+  z-index: 1000;
+}
+
+.logo h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.login-btn {
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: auto; /* right corner pe dhakel dega */
+}
+
+.login-btn:hover {
+  background-color: #0088cc;
+}
+
+/* Editor Cards */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  width: 370px;
+  height: 360px;
+  margin: 9px;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 1rem;
+  margin: 10px;
+  color: #222;
+  line-height: 1.2;
+  max-height: 40px;   /* max 2 lines */
+  overflow: hidden;
+}
+
+.card p {
+  font-size: 0.85rem;
+  color: #555;
+  margin: 0 10px 8px;
+  line-height: 1.2;
+  max-height: 50px;   /* max 3–4 lines */
+  overflow: hidden;
+}
+
+.card small {
+  font-size: 0.75rem;
+  color: gray;
+}
+
+
+/*Details page*/
+.news-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.news-container img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.news-container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.news-container p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/*dropdown*/
+.categories {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.categories li {
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.categories li.active {
+  background: #007bff;
+  color: white;
+}
+
+.categories select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+

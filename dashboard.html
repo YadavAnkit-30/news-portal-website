@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editor Dashboard | Daily Chronicle</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <script type="module" src="dashboard.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <h2>Editor Dashboard</h2>
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+  </header>
+
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <ul>
+        <li class="active" data-section="addNews">➕ Add News</li>
+        <li data-section="manageNews">📰 Manage News</li>
+      </ul>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <!-- Add News Section -->
+      <section id="addNews" class="section active">
+        <h3>Add News</h3>
+        <form id="newsForm" class="news-form">
+          <div class="form-group">
+            <label for="title"> News Title</label>
+            <input type="text" id="title" placeholder="Enter news title" required>
+          </div>
+
+          <div class="form-group">
+            <label for="description">News Description</label>
+            <textarea id="description" placeholder="Write a short description..." required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="imageUrl">🖼️ Image URL</label>
+            <input type="text" id="imageUrl" placeholder="Paste image link (optional)">
+          </div>
+
+          <button type="submit">➕ Submit News</button>
+        </form>
+      </section>
+
+      <!-- Manage News Section -->
+      <section id="manageNews" class="section">
+        <h3>Manage News</h3>
+        <div id="newsList" class="news-list"></div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

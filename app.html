@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Daily Chronicle</title>
+  <link rel="stylesheet" href="app.css">
+ <script type="module" src="app.js" defer></script>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Fixed Logo -->
+    <div class="logo">
+      <h1>The Daily Chronicle</h1>
+      <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+    </div>
+
+    <!-- Categories + Search -->
+    <nav>
+      <ul class="categories">
+        <li id="politics" onclick="navClick('politics')">Politics</li>
+        <li id="sports" onclick="navClick('sports')">Sports</li>
+        <li id="education" onclick="navClick('education')">Education</li>
+        <li id="technology" onclick="navClick('technology')">Technology</li>
+        <li id="entertainment" onclick="navClick('entertainment')">Entertainment</li>
+         <li id="recent" onclick="navClick('recent')">Recently Added</li>
+
+           <!-- Date Filter Dropdown -->
+  <li>
+    <select id="dateFilter">
+      <option value="all">All Time</option>
+      <option value="today">Today</option>
+      <option value="7days">Last 7 Days</option>
+      <option value="30days">Last 30 Days</option>
+    </select>
+  </li>
+</ul>
+      </ul>
+      <div class="searchBar">
+        <input type="text" placeholder="Search here" id="inputData">
+        <button id="searchBtn">Search</button>
+      </div>
+    </nav>
+
+    <!-- Category Title -->
+    <div class="category">
+      <h1 id="type"></h1>
+    </div>
+
+    <!-- Loader -->
+    <div class="loader-container" id="loader">
+      <div class="loader"></div>
+      <p>Loading news...</p>
+    </div>
+
+    <!-- News Cards -->
+    <div class="cardData"></div>
+
+  </div>
+</body>
+</html>

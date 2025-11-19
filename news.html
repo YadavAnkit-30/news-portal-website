@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Details</title>
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="news.css">
+  <script type="module" src="news.js" defer></script>
+</head>
+<body>
+  <div class="news-container">
+    <h1 id="newsTitle"></h1>
+    <p class="meta">Category: Recently Added • <span id="newsDate"></span></p>
+    <img id="newsImage" alt="News Image">
+    <p id="newsDescription"></p>
+
+    <div class="share">
+      <p>Share this article:</p>
+      <button onclick="shareNews('whatsapp')">WhatsApp</button>
+      <button onclick="shareNews('twitter')">Twitter</button>
+      <button onclick="shareNews('facebook')">Facebook</button>
+    </div>
+
+    <h2>Related News</h2>
+    <div id="relatedNews" class="related"></div>
+  </div>
+</body>
+</html>
