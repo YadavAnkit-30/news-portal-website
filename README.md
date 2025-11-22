@@ -1,78 +1,75 @@
-title: "News Portal Website — Official Web Application"
+📰 News Portal Website — Real-Time News + Editor Dashboard
+A responsive and dynamic News Portal Website that displays real-time global news using NewsAPI and allows editors to upload their own articles stored securely in Firebase Firestore.
+The system includes a modern UI, category-based browsing, search & filter features, and a “Recently Added” section for editor-submitted content.
 
-description: |
-  A responsive and modern News Portal Website that displays global news using NewsAPI
-  while allowing Editors to upload their own articles through Firebase.
-  The platform combines API-based news, editor-contributed content, and a clean,
-  user-friendly interface.
+🌟 Website Preview
+-Modern card-based UI
+-Fully mobile responsive
+-Real-time news from NewsAPI
+-Editor Dashboard for article uploads
+-Detailed article page with related news
+-Firebase-powered backend
 
-website_preview:
-  - "Clean and minimal UI with modern design"
-  - "Fully mobile-responsive layout"
-  - "Smooth navigation across multiple news sections"
-  - "Professional HTML, CSS, JavaScript frontend with Firebase backend"
+🚀 Features
 
-features:
-  homepage:
-    - "Displays top headlines fetched from NewsAPI"
-    - "Shows editor-uploaded articles in the Recently Added section"
+📰 User Features
+-Fetches global news in real-time using NewsAPI
+-Category-wise browsing (Technology, Sports, Politics, etc.)
+-Search news by keywords
+-Filter news by date
+-View recently added editor articles
+-Open full news in a separate, detailed page
 
-  editor_login:
-    - "Secure Firebase Authentication for editors"
-    - "Only authorized editors can post articles"
+✍️ Editor Features
+-Secure Login using Firebase Authentication
+-Add news with:
+ -Title
+ -Description
+ -Image URL
+ -Category
 
-  add_news_module:
-    - "Editors enter title, description, category, and image URL"
-    - "News is stored inside Firebase Firestore"
+-Articles automatically appear under Recently Added
+-Simple and easy-to-use dashboard interface
 
-  search_module:
-    - "Search across API and editor-uploaded news"
-    - "Keyword-based searching"
+🎨 Modern UI/UX
+-Clean card-based interface
+-Responsive layout for all devices
+-Smooth grid alignment
+-Easy readability with perfect spacing & typography
 
-  filter_module:
-    - "Filter news articles by date"
-    - "Helps users browse older or category-specific news"
-
-  news_details_page:
-    - "Shows full news description"
-    - "Displays related stories"
-
-  ui_ux:
-    - "Responsive card-based layout"
-    - "Modern styling and typography"
-    
-
+📁 Project Structure
 project/
-├── index.html              # Homepage – API + Recent News
-├── editor-login.html       # Editor Authentication Page
-├── add-news.html           # Page for Editors to upload articles
-├── news-details.html       # Full article details page
-├── assets/
-│   ├── css/style.css       # All styling files
-│   ├── js/app.js           # Main script for news rendering
-│   ├── js/api.js           # NewsAPI handling module
-│   ├── js/firebase.js      # Firebase config + Firestore operations
-└── README.md               # Project documentation
+├── app.html               # Main UI page for users
+├── app.css                # Styling for main website
+├── app.js                 # Fetch API news + Firestore news
+│
+├── dashboard.html         # Editor login + article submission
+├── dashboard.css          # Editor dashboard styles
+├── dashboard.js           # Logic for adding editor articles
+│
+├── news.html              # Single article full view page
+│
+├── firebase-config.js     # Firebase initialization settings
+└── README.md              # Project documentation
 
+⚙️ Technologies Used
+-Frontend
+-HTML5
+-CSS3
+-JavaScript
 
-technologies_used:
-  - HTML5
-  - CSS3
-  - JavaScript ES6
-  - Firebase Authentication
-  - Firebase Firestore
-  - NewsAPI
-  - Responsive Web Design
-    
+Backend
+-Firebase Firestore
+-Firebase Authentication
+-Firebase Cloud Storage
 
-how_to_run:
-  - "Download or clone the repository"
-  - "Open the project in any editor"
-  - "Add Firebase config in firebase.js"
-  - "Add NewsAPI key in api.js"
-  - "Open index.html in browser — no server needed"
+API Integration
+-NewsAPI (for fetching worldwide news)
 
-author: "Ankit Yadav"
+Tools
+-Visual Studio Code
+-Live Server
+-Git & GitHub
 
-acknowledgments:
-  - "Thanks to open-source APIs, Firebase, and contributors who made this project possible."
+✨ Author
+-Ankit Yadav
