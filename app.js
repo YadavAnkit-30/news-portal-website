@@ -3,7 +3,7 @@ import { db } from "./firebase-config.js";
 import { collection, getDocs, orderBy, query, where } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
 // ================= Global Variables =================
-let key = "3c2b7c6b562b4f46ae97f1aa300da1aa"; //  API key
+let key = "YOUR API KEY"; //  API key
 let cardData = document.querySelector(".cardData");
 let searchBtn = document.getElementById("searchBtn");
 let inputData = document.getElementById("inputData");
@@ -173,5 +173,6 @@ document.getElementById("dateFilter").addEventListener("change", () => {
     getData(category); // API filter apply
   }
 });
+
 
 
